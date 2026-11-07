@@ -52,5 +52,13 @@ The AI command sends project descriptions, task details, and contributor names t
 
 ## Limitations
 
+## Verification
+
+Verified separate CLI runs for creation, listing, editing, assignment, completion,
+and JSON reload. Duplicate names, invalid dates, missing tasks, malformed JSON,
+and unavailable AI services return readable errors without overwriting saved data.
+A fake AI client verified that the summary receives the current project/task data.
+Live model generation was not verified because the local Ollama endpoint was unavailable.
+
 This is a single-user local prototype, not authentication or a concurrent database. Names and project titles are unique; task titles are unique within a project. No deletion command is provided. AI generation needs a running service and installed model; automated service checks can use a fake client.
 
